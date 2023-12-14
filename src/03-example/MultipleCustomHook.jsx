@@ -4,7 +4,7 @@ import { LoadingQuote, Quote } from './';
 export const MultipleCustomHook = () => {
   const { counter, increment } = useCounter();
 
-  const { data, isLoading } = useFetch(
+  const { data, isLoading, hasError } = useFetch(
     `https://rickandmortyapi.com/api/character/${counter}`
   );
 
